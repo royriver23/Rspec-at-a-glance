@@ -13,7 +13,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'bootstrap-sass'
 gem 'simple_form'
-
+gem 'redcarpet'
 
 group :development, :test do
   gem 'pry-byebug', platform: :mri
@@ -37,3 +37,5 @@ group :test do
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+ruby '2.3.1'
