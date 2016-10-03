@@ -6,3 +6,4 @@ application up and running.
 Things you may want to cover:
 
 * $ rails g rspec:install
+* $ rails g cucumber:install
