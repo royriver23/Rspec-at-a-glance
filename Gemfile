@@ -25,6 +25,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'spring-commands-rspec'
   gem 'spring-commands-cucumber'
+  gem 'rails-controller-testing' # It was not a separated gem in rails 4 or lower.
 end
 
 group :development do
