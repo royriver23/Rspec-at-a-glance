@@ -1,6 +1,24 @@
 class AchievementsController < ApplicationController
+
+  def index
+    @achievements = Achievement.public_access
+  end
+
   def new
     @achievement = Achievement.new
+  end
+
+  def edit
+    @achievement = Achievement.find(params[:id])
+  end
+
+  def update
+    @achievement = Achievement.find(params[:id])
+    if @achievement.update_attributes(achievement_params)
+      redirect_to achievement_path(@achievement)
+    else
+      render :edit
+    end
   end
 
   def create
@@ -14,6 +32,11 @@ class AchievementsController < ApplicationController
 
   def show
     @achievement = Achievement.find(params[:id])
+  end
+
+  def destroy
+    Achievement.destroy(params[:id])
+    redirect_to achievements_path
   end
 
   private
